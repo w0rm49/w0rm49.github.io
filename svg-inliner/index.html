@@ -10,6 +10,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd"
           crossorigin="anonymous" />
+
+    <style>
+        .drop-zone {
+            height: 10rem;
+            width: 100%;
+            line-height: 10rem;
+            border-radius: .5rem;
+            box-shadow: 0 0 1rem 1px black;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, .1);
+            font-size: 2rem;
+        }
+        .source-svg {
+            height: 20rem;
+        }
+        .is-drag-over {
+            background: rgba(255, 255, 255, .5);
+        }
+    </style>
 </head>
 <body>
 
@@ -17,8 +36,21 @@
     <h1>SVG inliner</h1>
 
     <div class="col-md-6">
-        <textarea class="form-control"></textarea>
+
+        <div class="drop-zone text-center text-success">
+            drop svg file here
+        </div>
+
+        <textarea class="form-control align-center source-svg" rows="10"></textarea>
     </div>
+
+    <div class="col-md-6">
+
+
+        <textarea class="form-control align-center source-svg" rows="10"></textarea>
+    </div>
+
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
