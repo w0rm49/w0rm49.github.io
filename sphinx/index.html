@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <style>
 
         .control-surface {
-            height: 600px;
+            height: 1200px;
             width: 314px;
             background: #ccc;
             border-radius: 10px;
@@ -37,7 +37,7 @@
         }
 
         .control-inner {
-            height: 560px;
+            height: 1160px;
             width: 294px;
             background: #555;
             border-radius: 10px;
@@ -50,12 +50,16 @@
         .square-button {
             width: 96px;
             height: 96px;
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
             display:inline-block;
             box-shadow: 2px 2px 2px 1px rgba(0,0,0,.7);
             margin: 0 24px;
             position: relative;
-
+            font-family: 'Russo One', sans-serif;
+            overflow: hidden;
+            font-size: 64px;
+            text-align: center;
+            line-height: 96px;
         }
 
         .triangle-left-button {
@@ -181,11 +185,11 @@
                 <div class="triangle-left-button fake-button"></div><div class="square-button fake-button"></div><div class="triangle-right-button white-triangle"></div>
             </div>
             <div class="row" style="margin-top: -44px; margin-left: 3px;">
-                <div class="square-button fake-button "></div><div class="square-button dark-orange"></div>
+                <div class="square-button fake-button "></div><div class="square-button dark-orange">3</div>
             </div>
 
             <div class="row" style="margin-top: -29px; margin-left: 0;">
-                <div class="triangle-left-button fake-button"></div><div class="square-button dark-orange"></div><div class="triangle-right-button white-triangle"></div>
+                <div class="triangle-left-button fake-button"></div><div class="square-button dark-orange">2</div><div class="triangle-right-button white-triangle"></div>
             </div>
 
 
@@ -201,20 +205,24 @@
 
 
             <div class="row" style="margin-top: -44px; margin-left: 3px;">
-                <div class="square-button dark-orange"></div><div class="square-button dark-orange"></div>
+                <div class="square-button dark-orange">1</div><div class="square-button dark-orange">6</div>
             </div>
             <div class="row" style="margin-top: -29px; margin-left: 0;">
-                <div class="triangle-left-button white-triangle"></div><div class="square-button dark-orange"></div><div class="triangle-right-button white-triangle"></div>
+                <div class="triangle-left-button white-triangle"></div><div class="square-button dark-orange">5</div><div class="triangle-right-button white-triangle"></div>
             </div>
 
             <div class="row" style="margin-top:-44px; margin-left: 3px;">
-                <div class="square-button dark-orange"></div><div class="square-button dark-orange"></div>
+                <div class="square-button dark-orange">4</div><div class="square-button dark-orange">9</div>
             </div>
             <div class="row" style="margin-top: -29px; margin-left: 0;">
-                <div class="triangle-left-button white-triangle"></div><div class="square-button dark-orange"></div><div class="triangle-right-button white-triangle"></div>
+                <div class="triangle-left-button white-triangle"></div><div class="square-button dark-orange">8</div><div class="triangle-right-button white-triangle"></div>
             </div>
-
-
+            <div class="row" style="margin-top:-44px; margin-left: 3px;">
+                <div class="square-button dark-orange">7</div><div class="square-button dark-orange">-</div>
+            </div>
+            <div class="row" style="margin-top: -29px; margin-left: 0;">
+                <div class="triangle-left-button fake-button"></div><div class="square-button dark-orange">0</div><div class="triangle-right-button fake-button"></div>
+            </div>
         </div>
     </div>
 
