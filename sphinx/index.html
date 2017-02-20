@@ -7,7 +7,7 @@
     <style>
 
         .control-surface {
-            height: 1200px;
+            height: 1438px;
             width: 314px;
             background: #ccc;
             border-radius: 10px;
@@ -37,7 +37,7 @@
         }
 
         .control-inner {
-            height: 1160px;
+            height: 1433px;
             width: 294px;
             background: #555;
             border-radius: 10px;
@@ -157,8 +157,116 @@
         }
 
 
+        .big-triangle-left-button {
+            width: 146px;
+            height: calc(288px - 9px);
+            background: transparent;
+            display: inline-block;
+            margin: 0 24px;
+            margin-left: 4px;
+            vertical-align: top;
+            overflow: hidden;
+            position: relative;
+            margin-top: -21px;
+            margin-right: 4px;
+            box-shadow: -6px 0 7px -5px rgba(0,0,0,.7);
+            pointer-events: none;
+        }
+
+        .big-triangle-left-button::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+            transform: rotate(45deg);
+            position: absolute;
+            left: -102px;
+            top: 50%;
+            margin-top: -102px;
+            box-shadow: 0 0 6px 2px rgba(0,0,0,.7);
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+
+        .big-triangle-right-button {
+            width: 147px;
+            height: calc(288px - 9px);
+            background: transparent;
+            display: inline-block;
+            margin: 0 24px;
+            margin-left: -10px;
+            vertical-align: top;
+            overflow: hidden;
+            position: relative;
+            margin-top: -21px;
+            margin-right: 4px;
+            box-shadow: 6px 0px 7px -5px rgba(0,0,0,.7);
+            pointer-events: none;
+        }
+
+        .big-triangle-right-button::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+            transform: rotate(45deg);
+            position: absolute;
+            right: -102px;
+            top: 50%;
+            margin-top: -102px;
+            box-shadow: 0 0 6px 2px rgba(0,0,0,.7);
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+
+
+        .big-triangle-bottom-button {
+            height: 142px;
+            width: 100%;
+            background: transparent;
+            display: inline-block;
+            margin: 0 24px;
+            margin-left: 4px;
+            vertical-align: top;
+            overflow: hidden;
+            position: relative;
+            margin-top: -24px;
+            margin-right: 4px;
+            box-shadow: -6px 0 7px -5px rgba(0,0,0,.7);
+            pointer-events: none;
+        }
+
+        .big-triangle-bottom-button::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 44px;
+            bottom: -100px;
+            margin-top: -102px;
+            box-shadow: 0 0 6px 2px rgba(0,0,0,.7);
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+
         .dark-orange {
             background: orangered;
+        }
+
+        .dark-orange-triangle::after {
+            background: orangered;
+        }
+
+        .light-orange-triangle::after {
+            background: darkorange;
         }
 
         .light-orange {
@@ -180,7 +288,6 @@
             </div>
 
 
-
             <div class="row " style="margin-top: -29px; margin-left: 0;">
                 <div class="triangle-left-button fake-button"></div><div class="square-button fake-button"></div><div class="triangle-right-button white-triangle"></div>
             </div>
@@ -191,17 +298,6 @@
             <div class="row" style="margin-top: -29px; margin-left: 0;">
                 <div class="triangle-left-button fake-button"></div><div class="square-button dark-orange">2</div><div class="triangle-right-button white-triangle"></div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
             <div class="row" style="margin-top: -44px; margin-left: 3px;">
@@ -223,6 +319,43 @@
             <div class="row" style="margin-top: -29px; margin-left: 0;">
                 <div class="triangle-left-button fake-button"></div><div class="square-button dark-orange">0</div><div class="triangle-right-button fake-button"></div>
             </div>
+
+
+            <div class="row" style="margin-top: -114px; margin-left: 0;">
+                <div class="big-triangle-left-button light-orange-triangle"></div><div class="big-triangle-right-button light-orange-triangle"></div>
+            </div>
+            <div class="row" style="margin-top: -117px; margin-left: 0;">
+                <div class="triangle-left-button fake-button"></div><div class="square-button light-orange"></div><div class="triangle-right-button fake-button"></div>
+            </div>
+            <div class="row" style="margin-top:-44px; margin-left: 3px;">
+                <div class="square-button light-orange"></div><div class="square-button light-orange"></div>
+            </div>
+            <div class="row" style="margin-top: -29px; margin-left: 0;">
+                <div class="triangle-left-button fake-button"></div><div class="square-button light-orange"></div><div class="triangle-right-button fake-button"></div>
+            </div>
+
+
+            <div class="row" style="margin-top: -114px; margin-left: 0;">
+                <div class="big-triangle-left-button light-orange-triangle"></div><div class="big-triangle-right-button light-orange-triangle"></div>
+            </div>
+            <div class="row" style="margin-top: -117px; margin-left: 0;">
+                <div class="triangle-left-button fake-button"></div><div class="square-button light-orange"></div><div class="triangle-right-button fake-button"></div>
+            </div>
+            <div class="row" style="margin-top:-44px; margin-left: 3px;">
+                <div class="square-button light-orange"></div><div class="square-button light-orange"></div>
+            </div>
+            <div class="row" style="margin-top: -29px; margin-left: 0;">
+                <div class="triangle-left-button fake-button"></div><div class="square-button light-orange"></div><div class="triangle-right-button fake-button"></div>
+            </div>
+
+
+            <div class="row" style="margin-top: -114px; margin-left: 0;">
+                <div class="big-triangle-left-button light-orange-triangle"></div><div class="big-triangle-right-button dark-orange-triangle"></div>
+            </div>
+            <div class="row" style="margin-top: -114px; margin-left: 0;">
+                <div class="big-triangle-bottom-button dark-orange-triangle"></div>
+            </div>
+
         </div>
     </div>
 
