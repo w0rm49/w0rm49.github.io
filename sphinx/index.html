@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        .control-surface {
+            height: 600px;
+            width: 308px;
+            background: #ccc;
+            border-radius: 10px;
+            /*box-shadow:*/
+                        /*22px 22px 5px 2px rgba(0,0,0,0.75),*/
+                        /*20px 20px 0px 20px rgba(0,0,0,0.75)*/
+
+            box-shadow: 0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+            ;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        .control-inner {
+            height: 560px;
+            width: 288px;
+            background: #ccc;
+            border-radius: 10px;
+            /*box-shadow:*/
+            /*22px 22px 5px 2px rgba(0,0,0,0.75),*/
+            /*20px 20px 0px 20px rgba(0,0,0,0.75)*/
+
+            box-shadow: 0 1px 0 #ccc inset,
+                0 -2px 0 #c9c9c9 inset,
+                0 -3px 0 #bbb inset,
+                0 -4px 0 #b9b9b9 inset,
+                0 -5px 0 #aaa inset,
+                0 -6px 1px rgba(0,0,0,.1) inset,
+                0 -0 5px rgba(0,0,0,.1) inset,
+                0 -1px 3px rgba(0,0,0,.3) inset,
+                0 -3px 5px rgba(0,0,0,.2) inset,
+                0 -5px 10px rgba(0,0,0,.25) inset,
+                0 -10px 10px rgba(0,0,0,.2) inset,
+                0 -20px 20px rgba(0,0,0,.15) inset;
+            ;
+            margin: 0 auto;
+        }
+
+        .square-button {
+            width: 96px;
+            height: 96px;
+            background: darkorange;
+            transform: rotate(45deg);
+            display:inline-block;
+
+            box-shadow:
+            0 0 5px rgba(0,0,0,.1),
+            0 1px 3px rgba(0,0,0,.3),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.25),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.15);
+        ;
+            margin: 0 24px;
+        }
+
+        .triangle-left-button {
+            /*width: 96px;*/
+            width: 0;
+            height: 0;
+            background: ;
+            transform: rotate(45deg);
+            display:inline-block;
+            border-top: 48px solid darkorange;
+            border-bottom: 48px solid transparent;
+            border-left: 48px solid transparent;
+            border-right: 48px solid darkorange;
+
+            box-shadow:
+            0 0 5px rgba(0,0,0,.1),
+            0 1px 3px rgba(0,0,0,.3),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.25),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.15);
+
+            margin: 0 24px;
+
+        }
+
+        .triangle-left-button::after {
+            content: '';
+            display: block;
+            background: red;
+            width: 22px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="control-surface">
+        <!--<div class="control-inner">-->
+
+            <!--<div class="row" style="margin-top: 29px;">-->
+                <!--<div class="square-button size-1"></div><div class="square-button size-1"></div>-->
+            <!--</div>-->
+            <!--<div class="row" style="margin-top: -29px; margin-left: -72px;">-->
+                <!--<div class="triangle-left-button size-1"></div><div class="square-button size-1"></div><div class="triangle-right-button size-1"></div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
+    </div>
+
+</body>
+</html>
