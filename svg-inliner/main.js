@@ -9,6 +9,7 @@
     var $dropZone = $('.drop-zone');
     var $source = $('.source-svg');
     var $target = $('.target-svg');
+    var $process = $('.process');
 
     $dropZone.on({
         'drag dragstart dragend dragover dragenter dragleave drop': function(e) {
@@ -41,6 +42,8 @@
 
         }
     });
+
+    $process.click(process);
 
     function process() {
         var src = $source.val();
