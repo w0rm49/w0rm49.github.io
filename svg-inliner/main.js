@@ -46,14 +46,15 @@
     $process.click(process);
 
     function process() {
-        var src = $source.val();
-        var result = src;
+        var result = $source.val();
 
         //  remove unnecessary attributes on svg tag
 
         result = replace(result, "\n", '');
         result = replace(result, "\r", '');
         result = replace(result, "\t", ' ');
+
+        result = result.replace(/ +/g, ' ');
 
         result = replace(result, '"', "'");
         result = replace(result, '<', '%3c');
