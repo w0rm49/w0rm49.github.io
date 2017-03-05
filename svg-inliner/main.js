@@ -64,7 +64,7 @@
         result = replace(result, '#', '%23');
 
         $target.html(result);
-        $viewer.css('background-image', 'url("data:image/svg+xml,' + result + '");');
+        $viewer.css('background-image', 'url("data:image/svg+xml,' + result + '")');
         $bgCode.val('background-image: url("data:image/svg+xml,' + result + '");');
     }
 
