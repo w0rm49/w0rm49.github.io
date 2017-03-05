@@ -10,6 +10,8 @@
     var $source = $('.source-svg');
     var $target = $('.target-svg');
     var $process = $('.process');
+    var $viewer = $('.js-view-svg');
+    var $bgCode = $('.bg-code');
 
     $dropZone.on({
         'drag dragstart dragend dragover dragenter dragleave drop': function(e) {
@@ -48,8 +50,6 @@
     function process() {
         var result = $source.val();
 
-        //  remove unnecessary attributes on svg tag
-
         result = replace(result, "\n", '');
         result = replace(result, "\r", '');
         result = replace(result, "\t", ' ');
@@ -64,6 +64,8 @@
         result = replace(result, '#', '%23');
 
         $target.html(result);
+        $viewer.css('background-image', 'url("data:image/svg+xml,' + result + '");');
+        $bgCode.val('background-image: url("data:image/svg+xml,' + result + '");');
     }
 
     function replace(text, search, replace) {
