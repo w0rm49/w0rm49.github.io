@@ -4,8 +4,6 @@
 
 (function($) {
 
-    //drop area
-
     var $dropZone = $('.drop-zone');
     var $source = $('.source-svg');
     var $target = $('.target-svg');
@@ -37,7 +35,6 @@
                 if (evt.target.readyState == FileReader.DONE) {
                     $source.val(evt.target.result);
                     process();
-                    // test result
                 }
             };
             reader.readAsText(droppedFiles[0]);
