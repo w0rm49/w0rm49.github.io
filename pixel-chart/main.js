@@ -66,6 +66,11 @@
                     imageData.data[idx + 3] = alpha;
                     gsData.push(shade);
                 }
+                gsData.push(-1);
+                gsData.push(-1);
+                gsData.push(-1);
+                gsData.push(-1);
+                gsData.push(-1);
             }
 
             canvas.getContext('2d').putImageData(imageData, 0, 0);
