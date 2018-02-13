@@ -7,6 +7,7 @@
     var $dropZone = $('.drop-zone');
     var $showData = $('.show-data');
     var $pixelData = $('.pixel-data');
+    var $dropMessage = $('.drop-message');
 
     var delimiter = -50;
 
@@ -40,7 +41,7 @@
                 }
             };
             reader.readAsDataURL(droppedFiles[0]);
-
+            $dropMessage.hide();
         }
     });
 
@@ -57,7 +58,8 @@
             var imageData = canvas.getContext('2d').getImageData(0, 0, img.width, img.height);
             var gsData = [];
 
-            for (var j = 0 ; j < imageData.height ; j++) {
+            //for (var j = 0 ; j < imageData.height ; j++) {
+            for (var j = 0 ; j < 3 ; j++) {
                 for (var i = 0 ; i < imageData.width ; i++) {
                     var idx = (j * 4) * imageData.width + (i * 4);
                     var shade = Math.round((imageData.data[idx] + imageData.data[idx + 1] + imageData.data[idx + 2]) / 3);
@@ -68,11 +70,11 @@
                     imageData.data[idx + 3] = alpha;
                     gsData.push(shade);
                 }
-                gsData.push(delimiter);
-                gsData.push(delimiter);
-                gsData.push(delimiter);
-                gsData.push(delimiter);
-                gsData.push(delimiter);
+                //gsData.push(delimiter);
+                //gsData.push(delimiter);
+                //gsData.push(delimiter);
+                //gsData.push(delimiter);
+                //gsData.push(delimiter);
             }
 
             canvas.getContext('2d').putImageData(imageData, 0, 0);
@@ -81,7 +83,8 @@
 
             var graphData = [
                 {
-                    type: "line",
+                    //type: "line",
+                    type: "spline",
                     dataPoints: gsData.map(function(el) {
                         return { y: el };
                     })
