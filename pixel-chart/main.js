@@ -85,6 +85,7 @@
                 {
                     //type: "line",
                     type: "spline",
+                    lineThickness: 1,
                     dataPoints: gsData.map(function(el) {
                         return { y: el };
                     })
