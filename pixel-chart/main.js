@@ -8,6 +8,8 @@
     var $showData = $('.show-data');
     var $pixelData = $('.pixel-data');
 
+    var delimiter = -50;
+
     $showData.on('click', function() {
         $pixelData.toggle();
     });
@@ -66,19 +68,49 @@
                     imageData.data[idx + 3] = alpha;
                     gsData.push(shade);
                 }
-                gsData.push(-1);
-                gsData.push(-1);
-                gsData.push(-1);
-                gsData.push(-1);
-                gsData.push(-1);
+                gsData.push(delimiter);
+                gsData.push(delimiter);
+                gsData.push(delimiter);
+                gsData.push(delimiter);
+                gsData.push(delimiter);
             }
 
             canvas.getContext('2d').putImageData(imageData, 0, 0);
             displayImg.src = canvas.toDataURL();
             $pixelData.val(gsData.join(','));
+
+            var graphData = [
+                {
+                    type: "line",
+                    dataPoints: gsData.map(function(el) {
+                        return { y: el };
+                    })
+                }
+            ];
+
+            drawChart(graphData);
         };
 
         img.src = imageData;
     }
 
+    function drawChart(imageData) {
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
+                zoomEnabled: true,
+                //title:{
+                //    text: ""
+                //},
+                axisX :{
+                    labelAngle: -30
+                },
+                axisY :{
+                    includeZero: false
+                },
+                data: imageData
+
+            });
+
+        chart.render();
+    }
 })(jQuery);
