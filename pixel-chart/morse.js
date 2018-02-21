@@ -20,7 +20,7 @@
         var graphData = [
             {
                 type: "stepLine",
-                lineThickness: 1,
+                lineThickness: 2,
                 dataPoints: result.split('').map(function(el) {
                     return { y: parseInt(el) };
                 })
