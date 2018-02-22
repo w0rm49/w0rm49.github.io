@@ -50,17 +50,21 @@
 
             var newCanvas = document.createElement('canvas');
             newCanvas.width = img.width;
-            newCanvas.height = img.height * (lines + 1);
+            newCanvas.height = img.height * 2;
             newCanvas.getContext('2d').clearRect(0,0, newCanvas.width, newCanvas.height);
 
             var imageData = canvas.getContext('2d').getImageData(0, 0, img.width, img.height);
-            var newImageData = newCanvas.getContext('2d').getImageData(0, 0, img.width, img.height * (lines + 1));
+            var newImageData = newCanvas.getContext('2d').getImageData(0, 0, img.width, img.height * 2);
             var i;
 
             for (var j = 0 ; j < imageData.height ; j++) {
                 for (i = 0 ; i < imageData.width ; i++) {
+                    var even = !(j % 2);
                     var idx = (j * 4) * imageData.width + (i * 4);
-                    var newIdx = (j * (lines + 1) * 4) * imageData.width + (i * 4);
+                    var newIdx = even
+                        ? ((j * 2)     * 4) * imageData.width + (i * 4)
+                        : (((j - 1) * 2 + 1) * 4) * imageData.width + (i * 4);
+
                     newImageData.data[newIdx] = imageData.data[idx];
                     newImageData.data[newIdx + 1] = imageData.data[idx + 1];
                     newImageData.data[newIdx + 2] = imageData.data[idx + 2];
